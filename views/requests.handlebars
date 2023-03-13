@@ -1,0 +1,59 @@
+<div class="row bg-light">
+  <div class="col-md-6">
+    <h2 class="display-3">Create a request</h2>
+
+    <form class="form request-form">
+      <div class="form-group">
+        <label for="console-request">Choose the console:</label>
+        <select name="console-request" class="form-control" id="console-request">
+          {{#each consoles}}
+          <option value="{{this.id}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="game-signup">Choose the game:</label>
+        <select name="game-request" class="form-control" id="game-request">
+          {{#each games}}
+          <option value="{{this.id}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="date-time" for="meeting-time">Date and time:</label>
+        <input type="datetime-local" id="meeting-time" name="meeting-time" value="2023-03-07T19:30"
+          min="2023-03-07T00:00" max="2026-03-30T00:00">
+      </div>
+
+      <hr>
+      <div class="form-group">
+        <button class="btn btn-secondary" type="submit" id="submit">Submit my request</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <h2 class="display-3">My open requests</h2>
+
+      <table id="my-request-table" class="table">
+        <tr>
+          <th>Game Name</th>
+          <th>Console</th>
+          <th>Day/Time</th>
+        </tr>
+        {{#if requests.length}}
+        {{#each requests as |r|}}
+        <tr>
+          <td>{{game.name}}</td>
+          <td>{{console.name}}</td>
+          <td>{{r.date}}</td>
+        </tr>
+        {{/each}}
+        {{/if}}
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="/js/request.js"></script>

@@ -1,0 +1,34 @@
+{{!-- Welcome bar --}}
+
+<div class="container" id="welcome-bar">
+   <div class="row">
+      <div class="col-6">
+         <h2 class="display-3">Welcome {{user_name}}!</h2>
+      </div>
+      <div class="col">
+         <a role="button" class="btn btn-danger float-end" href="/find-a-buddy">Find Buddy</a>
+         <a role="button" class="btn btn-danger float-end" href="/requests">New Request</a>
+      </div>
+   </div>
+</div>
+{{!-- Games Cards --}}
+
+<!-- Loop over each object in the games array -->
+<div class="container">
+   <div class="row d-flex flex-wrap justify-content-between">
+      {{#each games as |game| }}
+      {{!-- each card is the link to open a modal --}}
+
+      <div class="card " style="background-image: url('{{image}}'); ">
+
+         <a href="/game/{{game.id}}" class="card-body">
+
+            <h5 class="card-title align-items-center">{{game.name}}</h5>
+
+         </a>
+
+      </div>
+
+
+      {{/each}}
+   </div>

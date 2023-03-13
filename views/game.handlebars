@@ -1,0 +1,39 @@
+<!-- displaying posts -->
+
+
+<div class="container ">
+    <div class="row ">
+        <div class="col-4 game-image" style="background-image: url({{games.image}}); background-repeat: no-repeat; ">
+        </div>
+        <div class="col-8 ">
+            <div class="row">
+                <h2 class="display-3">{{games.name}}</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <h3 class="display-6">Review:</h3>
+            </div>
+            {{!-- {{#if reviews.length}} --}}
+            <div class="row">
+                <p>{{reviews.content}}</p>
+            </div>
+            <div class="row">
+                <p>{{user.user_name}}</p>
+            </div>
+            <div class="row">
+                <p>{{ get_stars reviews.stars}}</p>
+            </div>
+            {{!-- {{else}} --}}
+            {{!-- {{/if}} --}}
+            <hr>
+            <div class="row">
+                <p>Are you interested in playing this game with some new friends? Select one of our links below to
+                    checkout the requests available or create your own!</p>
+            </div>
+            <div class="row">
+                <a role="button" class="btn btn-danger" id="gameBtn" href="/find-a-buddy">Find Buddy</a>
+                <a role="button" class="btn btn-danger" id="gameBtn" href="/requests">New Request</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{{!-- Contact form --}}
+<div class="row bg-light">
+    <div class="col-md-6">
+        <h2 class="display-3">Get in contact</h2>
+
+        <form class="form request-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="name" class="form-control" id="inputName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="discord">Discord Link:</label>
+                <input type="name" class="form-control" id="inputDiscord" placeholder="username#0000">
+            </div>
+            <div class="form-group">
+                <label for="textArea">Message:</label>
+                <textarea class="form-control" id="inputTextArea" rows="3"></textarea>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <button class="btn btn-secondary" type="submit" id="submit" >Submit my request</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{!-- Source --}}
+<script src="/js/contact.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>

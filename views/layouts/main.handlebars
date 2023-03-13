@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <h1>
+                    <a href="/">Buddy Up</a>
+                </h1>
+                <section class="d-flex" role="search">
+                    {{#if logged_in}}
+                    <a type="button" class="btn-nav" href="/">Homepage</a>
+                    <button class="btn-nav" id="logout">Logout</button>
+                    {{else}}
+                    <button class="btn-nav" href="/login">Login</button>
+                    {{/if}}
+                </section>
+            </div>
+        </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+        {{{ body }}}
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    {{#if logged_in}}
+    <script src="/js/index.js"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    {{!-- darkmode setup --}}
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+
+</body>

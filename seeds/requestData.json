@@ -1,0 +1,17 @@
+[
+    {
+        "user_id": "4",
+        "game_id": "4",
+        "console_id": "2"
+    },
+    {
+        "user_id": "2",
+        "game_id": "5",
+        "console_id": "2"
+    },
+    {
+        "user_id": "3",
+        "game_id": "6",
+        "console_id": "3"
+    }
+]
